@@ -1,0 +1,570 @@
+<project title="P&amp;ID" version="0.90">
+    <properties>
+        <property name="saveddate" show="1">1/10/2026</property>
+        <property name="saveddate-eu" show="1">10-01-2026</property>
+        <property name="savedtime" show="1">14:46</property>
+        <property name="savedfilepath" show="1">C:/Users/harrisonc/Downloads/Artemia-Hatcher/docs/P&amp;ID.qet</property>
+        <property name="saveddate-us" show="1">2026-01-10</property>
+        <property name="savedfilename" show="1">P&amp;ID</property>
+    </properties>
+    <newdiagrams>
+        <border cols="17" rows="8" displayrows="true" rowsize="80" colsize="60" displaycols="true"/>
+        <inset plant="" auto_page_num="" locmach="" indexrev="" title="" folio="%id/%total" filename="" date="null" version="" author="" displayAt="bottom"/>
+        <conductors formula="" cable="" horizrotatetext="0" numsize="7" vertical-alignment="AlignRight" color2="#000000" num="_" bicolor="false" condsize="1" type="multi" displaytext="1" text_color="#000000" vertirotatetext="270" conductor_section="" tension_protocol="" dash-size="2" horizontal-alignment="AlignBottom" onetextperfolio="0" bus="" conductor_color="" function=""/>
+        <report label="%f-%l%c"/>
+        <xrefs>
+            <xref snapto="label" powerprefix="" master_label="%f-%l%c" offset="0" type="commutator" slave_label="(%f-%l%c)" delayprefix="" switchprefix="" displayhas="cross" showpowerctc="true" xrefpos=""/>
+            <xref snapto="label" powerprefix="" master_label="%f-%l%c" offset="0" type="protection" slave_label="(%f-%l%c)" delayprefix="" switchprefix="" displayhas="cross" showpowerctc="true" xrefpos=""/>
+            <xref snapto="label" powerprefix="" master_label="%f-%l%c" offset="40" type="coil" slave_label="(%f-%l%c)" delayprefix="" switchprefix="" displayhas="cross" showpowerctc="true" xrefpos="AlignTop"/>
+        </xrefs>
+        <conductors_autonums freeze_new_conductors="false" current_autonum=""/>
+        <folio_autonums/>
+        <element_autonums freeze_new_elements="false" current_autonum=""/>
+    </newdiagrams>
+    <diagram rows="8" auto_page_num="Create an auto folio numbering" rowsize="80" colsize="60" indexrev="" filename="" locmach="" version="0.90+c7891bc4cb0a58100c957a06d79751d3" displayrows="true" freezeNewConductor="false" displayAt="bottom" plant="" order="1" height="660" displaycols="true" cols="17" date="20260110" folio="%id/%total" author="Harrison Chung" title="P&amp;ID" freezeNewElement="false">
+        <defaultconductor formula="" cable="" horizrotatetext="0" numsize="7" vertical-alignment="AlignRight" color2="#000000" num="_" bicolor="false" condsize="1" type="multi" displaytext="1" text_color="#000000" vertirotatetext="270" horizontal-alignment="AlignBottom" conductor_section="" tension_protocol="" dash-size="2" onetextperfolio="0" bus="" conductor_color="" function=""/>
+        <elements>
+            <element y="440" type="embed://import/60_energy/11_water/01_Termicas-Fluidos2_Rafa/Calefaccion/equipos-calefaccion/bombas-cir/bomba-circuladora.elmt" uuid="{e8105d42-d96c-4b88-b4c5-55b579b8df7a}" freezeLabel="false" x="710" orientation="1" prefix="" z="10">
+                <terminals>
+                    <terminal y="-20" x="6" orientation="1" id="0"/>
+                    <terminal y="0" x="-16" orientation="3" id="1"/>
+                    <terminal y="0" x="16" orientation="1" id="2"/>
+                </terminals>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation name="formula" show="1"></elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text frame="false" y="-20" keep_visual_rotation="true" Valignment="AlignTop" rotation="270" text_from="ElementInfo" uuid="{0b117576-aefd-41f8-a2cb-17d128011f2e}" x="50" text_width="-1" Halignment="AlignLeft" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal">
+                        <text></text>
+                        <info_name>label</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element y="230" type="embed://import/60_energy/31_solar_thermal/ballon_echangeur/ballon_stock1000l_2.elmt" uuid="{7ff77a53-5888-4654-94ea-73e527d48136}" freezeLabel="false" x="400" orientation="0" prefix="" z="10">
+                <terminals>
+                    <terminal y="-66.883" x="-3" orientation="0" id="3"/>
+                    <terminal y="-61.3454" x="-21.5" orientation="3" id="4"/>
+                    <terminal y="-61.3454" x="15.5" orientation="1" id="5"/>
+                    <terminal y="-51.8078" x="-7" orientation="1" id="6"/>
+                    <terminal y="-37.5014" x="-21.5" orientation="3" id="7"/>
+                    <terminal y="-37.5014" x="15.5" orientation="1" id="8"/>
+                    <terminal y="-18.4263" x="-7" orientation="1" id="9"/>
+                    <terminal y="0.648934" x="-21.5" orientation="3" id="10"/>
+                    <terminal y="0.648934" x="15.5" orientation="1" id="11"/>
+                    <terminal y="14.9553" x="-7" orientation="1" id="12"/>
+                    <terminal y="24.4929" x="-21.5" orientation="3" id="13"/>
+                    <terminal y="24.4929" x="15.5" orientation="1" id="14"/>
+                    <terminal y="36.2299" x="-3" orientation="2" id="15"/>
+                </terminals>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation name="formula" show="1"></elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text frame="false" y="-34.5" keep_visual_rotation="true" Valignment="AlignTop" rotation="0" text_from="ElementInfo" uuid="{40762fea-148c-4a4d-bdb3-137b53d3c724}" x="-26" text_width="-1" Halignment="AlignLeft" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal">
+                        <text></text>
+                        <info_name>label</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element y="340" type="embed://import/60_energy/31_solar_thermal/ballon_echangeur/ballon_stock1000l_2.elmt" uuid="{acbd1c6a-d32e-49d0-9893-1fe7a293c542}" freezeLabel="false" x="650" orientation="1" prefix="" z="10">
+                <terminals>
+                    <terminal y="-66.883" x="-3" orientation="0" id="16"/>
+                    <terminal y="-61.3454" x="-21.5" orientation="3" id="17"/>
+                    <terminal y="-61.3454" x="15.5" orientation="1" id="18"/>
+                    <terminal y="-51.8078" x="-7" orientation="1" id="19"/>
+                    <terminal y="-37.5014" x="-21.5" orientation="3" id="20"/>
+                    <terminal y="-37.5014" x="15.5" orientation="1" id="21"/>
+                    <terminal y="-18.4263" x="-7" orientation="1" id="22"/>
+                    <terminal y="0.648934" x="-21.5" orientation="3" id="23"/>
+                    <terminal y="0.648934" x="15.5" orientation="1" id="24"/>
+                    <terminal y="14.9553" x="-7" orientation="1" id="25"/>
+                    <terminal y="24.4929" x="-21.5" orientation="3" id="26"/>
+                    <terminal y="24.4929" x="15.5" orientation="1" id="27"/>
+                    <terminal y="36.2299" x="-3" orientation="2" id="28"/>
+                </terminals>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation name="formula" show="1"></elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text frame="false" y="-34.5" keep_visual_rotation="true" Valignment="AlignTop" rotation="270" text_from="ElementInfo" uuid="{9026a893-aa06-4999-83ee-4ba2ed28b2a9}" x="-26" text_width="-1" Halignment="AlignLeft" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal">
+                        <text></text>
+                        <info_name>label</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element y="470" type="embed://import/60_energy/31_solar_thermal/ballon_echangeur/ballon_stock1000l_2.elmt" uuid="{5b0a3c73-3baf-4fa6-b3d7-f0164c9f1e5f}" freezeLabel="false" x="400" orientation="0" prefix="" z="10">
+                <terminals>
+                    <terminal y="-66.883" x="-3" orientation="0" id="29"/>
+                    <terminal y="-61.3454" x="-21.5" orientation="3" id="30"/>
+                    <terminal y="-61.3454" x="15.5" orientation="1" id="31"/>
+                    <terminal y="-51.8078" x="-7" orientation="1" id="32"/>
+                    <terminal y="-37.5014" x="-21.5" orientation="3" id="33"/>
+                    <terminal y="-37.5014" x="15.5" orientation="1" id="34"/>
+                    <terminal y="-18.4263" x="-7" orientation="1" id="35"/>
+                    <terminal y="0.648934" x="-21.5" orientation="3" id="36"/>
+                    <terminal y="0.648934" x="15.5" orientation="1" id="37"/>
+                    <terminal y="14.9553" x="-7" orientation="1" id="38"/>
+                    <terminal y="24.4929" x="-21.5" orientation="3" id="39"/>
+                    <terminal y="24.4929" x="15.5" orientation="1" id="40"/>
+                    <terminal y="36.2299" x="-3" orientation="2" id="41"/>
+                </terminals>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation name="formula" show="1"></elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text frame="false" y="-34.5" keep_visual_rotation="true" Valignment="AlignTop" rotation="0" text_from="ElementInfo" uuid="{a2377f52-0b8a-4d95-956a-fdedb59c3add}" x="-26" text_width="-1" Halignment="AlignLeft" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal">
+                        <text></text>
+                        <info_name>label</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element y="290" type="embed://import/60_energy/11_water/01_Termicas-Fluidos2_Rafa/Calefaccion/equipos-calefaccion/bombas-cir/bomba-circuladora.elmt" uuid="{199d5a04-8538-4fbe-bd71-4b5580e3cf1f}" freezeLabel="false" x="520" orientation="0" prefix="" z="10">
+                <terminals>
+                    <terminal y="-20" x="6" orientation="1" id="42"/>
+                    <terminal y="0" x="-16" orientation="3" id="43"/>
+                    <terminal y="0" x="16" orientation="1" id="44"/>
+                </terminals>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation name="formula" show="1"></elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text frame="false" y="160" keep_visual_rotation="true" Valignment="AlignTop" rotation="0" text_from="ElementInfo" uuid="{c51606ed-3b3b-4fc4-b739-95ec1ec8cbcc}" x="50" text_width="-1" Halignment="AlignLeft" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal">
+                        <text></text>
+                        <info_name>label</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+            <element y="380" type="embed://import/60_energy/11_water/01_Termicas-Fluidos2_Rafa/Calefaccion/equipos-calefaccion/bombas-cir/bomba-circuladora.elmt" uuid="{b4de4e3f-3d9d-4a0a-9ccf-cd27a8344cc7}" freezeLabel="false" x="520" orientation="0" prefix="" z="10">
+                <terminals>
+                    <terminal y="-20" x="6" orientation="1" id="45"/>
+                    <terminal y="0" x="-16" orientation="3" id="46"/>
+                    <terminal y="0" x="16" orientation="1" id="47"/>
+                </terminals>
+                <inputs/>
+                <elementInformations>
+                    <elementInformation name="formula" show="1"></elementInformation>
+                </elementInformations>
+                <dynamic_texts>
+                    <dynamic_elmt_text frame="false" y="0" keep_visual_rotation="true" Valignment="AlignTop" rotation="0" text_from="ElementInfo" uuid="{59567dba-0ce3-4989-8be2-86b15bcc22de}" x="10" text_width="-1" Halignment="AlignLeft" font="Sans Serif,4,-1,5,0,0,0,0,0,0,normal">
+                        <text></text>
+                        <info_name>label</info_name>
+                    </dynamic_elmt_text>
+                </dynamic_texts>
+                <texts_groups/>
+            </element>
+        </elements>
+        <conductors>
+            <conductor x="220" formula="" y="0" cable="" horizrotatetext="0" numsize="7" vertical-alignment="AlignRight" color2="#000000" num="" color="#1515ff" bicolor="false" terminal1="44" condsize="1" type="multi" displaytext="1" text_color="#1515ff" freezeLabel="false" vertirotatetext="270" tension_protocol="" dash-size="2" conductor_section="" horizontal-alignment="AlignBottom" onetextperfolio="0" terminal2="26" bus="" function="" conductor_color="">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor x="220" formula="Wastewater" y="0" cable="" horizrotatetext="0" numsize="7" vertical-alignment="AlignRight" color2="#000000" num="Wastewater" usery="390" color="#aaafcb" bicolor="false" terminal1="47" condsize="1" type="multi" displaytext="1" text_color="#aaafcb" freezeLabel="false" vertirotatetext="270" tension_protocol="" dash-size="2" conductor_section="" horizontal-alignment="AlignBottom" onetextperfolio="0" terminal2="27" bus="" userx="210" function="" conductor_color="">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor x="220" formula="Yield" y="0" cable="" horizrotatetext="0" numsize="7" vertical-alignment="AlignRight" color2="#000000" num="Yield" usery="400" color="#ff861d" bicolor="false" terminal1="1" condsize="1" type="multi" displaytext="1" text_color="#ff861d" freezeLabel="false" vertirotatetext="270" tension_protocol="" dash-size="2" conductor_section="" horizontal-alignment="AlignBottom" onetextperfolio="0" terminal2="21" bus="" userx="450" function="" conductor_color="">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor x="110" formula="" y="0" cable="" horizrotatetext="0" numsize="7" vertical-alignment="AlignRight" color2="#000000" num="Water " usery="300" color="#1515ff" bicolor="false" terminal1="43" condsize="1" type="multi" displaytext="1" text_color="#1515ff" freezeLabel="false" vertirotatetext="270" tension_protocol="" dash-size="2" conductor_section="" horizontal-alignment="AlignBottom" onetextperfolio="0" terminal2="15" bus="" userx="320" function="" conductor_color="">
+                <sequentialNumbers/>
+            </conductor>
+            <conductor x="110" formula="" y="0" cable="" horizrotatetext="0" numsize="7" vertical-alignment="AlignRight" color2="#000000" num="" color="#aaafcb" bicolor="false" terminal1="46" condsize="1" type="multi" displaytext="1" text_color="#aaafcb" freezeLabel="false" vertirotatetext="270" tension_protocol="" dash-size="2" conductor_section="" horizontal-alignment="AlignBottom" onetextperfolio="0" terminal2="29" bus="" function="" conductor_color="">
+                <sequentialNumbers/>
+            </conductor>
+        </conductors>
+        <inputs>
+            <input text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xa;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xa;p, li { white-space: pre-wrap; }&#xa;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:0; font-style:normal;&quot;>&#xa;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>Holding Tank 1L&lt;/p>&lt;/body>&lt;/html>" y="280" rotation="0" x="650" font="Sans Serif,9,-1,5,0,0,0,0,0,0,normal"/>
+            <input text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xa;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xa;p, li { white-space: pre-wrap; }&#xa;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:0; font-style:normal;&quot;>&#xa;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>Holding Tank 20L&lt;/p>&lt;/body>&lt;/html>" y="200" rotation="0" x="440" font="Sans Serif,9,-1,5,0,0,0,0,0,0,normal"/>
+            <input text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xa;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xa;p, li { white-space: pre-wrap; }&#xa;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:0; font-style:normal;&quot;>&#xa;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>Holding Tank 20L&lt;/p>&lt;/body>&lt;/html>" y="450" rotation="0" x="430" font="Sans Serif,9,-1,5,0,0,0,0,0,0,normal"/>
+        </inputs>
+    </diagram>
+    <collection>
+        <category name="import">
+            <names>
+                <name lang="es">Elementos importados</name>
+                <name lang="fr">Éléments importés</name>
+                <name lang="sl">Uvoženi elementi</name>
+                <name lang="en">Imported elements</name>
+                <name lang="ca">Elements importats</name>
+                <name lang="de">Importierte elemente</name>
+                <name lang="da">Importerede elementer</name>
+                <name lang="pl">Elementy importowane</name>
+                <name lang="el">Εισηγμένα στοιχεία</name>
+                <name lang="hr">Uvezeni elementi</name>
+                <name lang="nl">Elementen geïmporteerd</name>
+                <name lang="it">Elementi importati</name>
+                <name lang="ru">Импортированные элементы</name>
+                <name lang="cs">Zavedené prvky</name>
+                <name lang="tr">İthal öğeler</name>
+                <name lang="pt">elementos importados</name>
+                <name lang="ro">Elemente importate</name>
+                <name lang="ja">インバートされた要素</name>
+                <name lang="uk">Імпортовані елементи</name>
+            </names>
+            <category name="60_energy">
+                <names>
+                    <name lang="it">Energia</name>
+                    <name lang="fr">Energie</name>
+                    <name lang="en">Energy</name>
+                    <name lang="el">Ενέργεια</name>
+                    <name lang="pl">Energia</name>
+                    <name lang="ja">エネルギー</name>
+                    <name lang="de">Energietechnik</name>
+                    <name lang="ar">طاقة</name>
+                    <name lang="nl">Energie</name>
+                    <name lang="es">Energía</name>
+                    <name lang="ru">Сантехника</name>
+                    <name lang="da">Energi teknik</name>
+                    <name lang="cs">Energie</name>
+                </names>
+                <category name="11_water">
+                    <names>
+                        <name lang="it">Acqua</name>
+                        <name lang="fr">Eaux</name>
+                        <name lang="en">Water</name>
+                        <name lang="el">Νερό</name>
+                        <name lang="pl">Instalacje wodne</name>
+                        <name lang="ja">水</name>
+                        <name lang="de">Wasser</name>
+                        <name lang="es">Agua</name>
+                        <name lang="da">VVS teknik</name>
+                        <name lang="cs">Voda</name>
+                    </names>
+                    <category name="01_Termicas-Fluidos2_Rafa">
+                        <names>
+                            <name lang="it">Termica Fluidi</name>
+                            <name lang="fr">Thermique-fluide</name>
+                            <name lang="en">Thermal-Fluids</name>
+                            <name lang="ca">Tèrmiques-Fluids</name>
+                            <name lang="es">Térmicas-Fluidos</name>
+                        </names>
+                        <category name="Calefaccion">
+                            <names>
+                                <name lang="it">Riscaldamento</name>
+                                <name lang="fr">Chauffage</name>
+                                <name lang="en">Heating</name>
+                                <name lang="ca">Calefacció</name>
+                                <name lang="es">Calefacción</name>
+                            </names>
+                            <category name="a-esquemas-agua">
+                                <names>
+                                    <name lang="fr">Schéma fluide</name>
+                                    <name lang="en">Schemes of fluids</name>
+                                    <name lang="ca">Esquemes de fluids</name>
+                                    <name lang="es">Esquemas de fluidos</name>
+                                </names>
+                                <element name="aljibe.elmt">
+                                    <definition ic="true" hotspot_x="34" hotspot_y="20" type="element" width="70" version="0.4" height="40" link_type="simple">
+                                        <uuid uuid="{E66EC0A3-133C-40F5-9442-25C31E397F14}"/>
+                                        <names>
+                                            <name lang="es">Aljibe</name>
+                                            <name lang="ca">Aljub</name>
+                                            <name lang="en">Water tank</name>
+                                        </names>
+                                        <informations>Rafael Ferrando.
+Mantenimiento de Instalaciones Térmicas</informations>
+                                        <description>
+                                            <rect style="line-style:normal;line-weight:normal;filling:blue;color:blue" y="-0.87869" x="-15.51" width="28.6" antialias="false" height="13.2105"/>
+                                            <line style="line-style:normal;line-weight:normal;filling:none;color:black" length2="1.5" end2="none" y2="9.8019" x1="14.8481" end1="none" antialias="false" length1="1.5" y1="9.8019" x2="28.8487"/>
+                                            <line style="line-style:normal;line-weight:normal;filling:none;color:black" length2="1.5" end2="none" y2="-9.77939" x1="-26.9692" end1="none" antialias="false" length1="1.5" y1="-9.77939" x2="-9.69008"/>
+                                            <line style="line-style:normal;line-weight:normal;filling:none;color:black" length2="1.5" end2="none" y2="-6.35089" x1="-8.8" end1="none" antialias="false" length1="1.5" y1="-9.74136" x2="-8.8"/>
+                                            <line style="line-style:normal;line-weight:thin;filling:none;color:black" length2="1.5" end2="none" y2="-4.09058" x1="-14.3" end1="none" antialias="false" length1="1.5" y1="-6.35089" x2="0"/>
+                                            <arc style="line-style:normal;line-weight:thin;filling:none;color:black" start="-30" y="-9.74136" x="-6.6" width="7.7" antialias="true" height="7.91109" angle="-140"/>
+                                            <line style="line-style:normal;line-weight:normal;filling:none;color:black" length2="1.5" end2="none" y2="-8" x1="-9" end1="none" antialias="false" length1="1.5" y1="-6" x2="-7"/>
+                                            <line style="line-style:normal;line-weight:normal;filling:none;color:black" length2="1.5" end2="none" y2="-8" x1="-9" end1="none" antialias="false" length1="1.5" y1="-6" x2="-11"/>
+                                            <rect style="line-style:normal;line-weight:thin;filling:none;color:black" y="-12" x="-16" width="29" antialias="false" height="24"/>
+                                            <rect style="line-style:normal;line-weight:thin;filling:none;color:black" y="-14" x="-18" width="33" antialias="false" height="28"/>
+                                            <line style="line-style:normal;line-weight:normal;filling:none;color:black" length2="1.5" end2="none" y2="-4" x1="13" end1="none" antialias="false" length1="1.5" y1="-4" x2="17"/>
+                                            <line style="line-style:normal;line-weight:normal;filling:none;color:black" length2="1.5" end2="none" y2="-1.24364" x1="18" end1="none" antialias="false" length1="1.5" y1="-3.69818" x2="18"/>
+                                            <line style="line-style:normal;line-weight:normal;filling:none;color:black" length2="1.5" end2="none" y2="2" x1="16" end1="none" antialias="false" length1="1.5" y1="0" x2="18"/>
+                                            <line style="line-style:normal;line-weight:normal;filling:none;color:black" length2="1.5" end2="none" y2="2" x1="20" end1="none" antialias="false" length1="1.5" y1="0" x2="18"/>
+                                            <line style="line-style:normal;line-weight:normal;filling:none;color:black" length2="1.5" end2="none" y2="5" x1="18" end1="none" antialias="false" length1="1.5" y1="2" x2="18"/>
+                                            <line style="line-style:normal;line-weight:normal;filling:none;color:black" length2="1.5" end2="none" y2="-15" x1="10" end1="none" antialias="false" length1="1.5" y1="-10" x2="10"/>
+                                            <input text="_L" y="18" size="4" x="-11" rotate="true" tagg="label"/>
+                                            <terminal y="10" x="30" orientation="e"/>
+                                            <terminal y="-9.5" x="-29" orientation="w"/>
+                                        </description>
+                                    </definition>
+                                </element>
+                            </category>
+                            <category name="equipos-calefaccion">
+                                <names>
+                                    <name lang="it">Impianti di riscaldamento</name>
+                                    <name lang="fr">Matériel de chauffage</name>
+                                    <name lang="en">Heating equipment</name>
+                                    <name lang="ca">Equips calefacció</name>
+                                    <name lang="es">Equipos de calefacción</name>
+                                </names>
+                                <category name="bombas-cir">
+                                    <names>
+                                        <name lang="it">Pompe di circolazione</name>
+                                        <name lang="fr">Pompes pour collecteurs</name>
+                                        <name lang="en">Collector pumps</name>
+                                        <name lang="ca">Bombes Col.lectors</name>
+                                        <name lang="es">Bombas Colectores</name>
+                                    </names>
+                                    <element name="bomba-circuladora.elmt">
+                                        <definition hotspot_x="24" hotspot_y="29" type="element" width="50" version="0.5" height="40" link_type="simple">
+                                            <uuid uuid="{33F87AEE-BD92-47FF-8849-EFEA2CF0D4DC}"/>
+                                            <names>
+                                                <name lang="ca">Bomba circuladora</name>
+                                                <name lang="es">Bomba circuladora</name>
+                                                <name lang="en">Circulating pump</name>
+                                                <name lang="it">Pompa circolazione</name>
+                                                <name lang="fr">Pompe de circulation</name>
+                                            </names>
+                                            <informations>Rafael Ferrando.
+Mantenimiento de Instalaciones Térmicas</informations>
+                                            <description>
+                                                <line style="line-style:normal;line-weight:normal;filling:none;color:black" length2="1.5" end2="none" y2="2" x1="15" end1="none" antialias="false" length1="1.5" y1="2" x2="18"/>
+                                                <line style="line-style:normal;line-weight:normal;filling:none;color:black" length2="1.5" end2="none" y2="2" x1="-18" end1="none" antialias="false" length1="1.5" y1="2" x2="-15"/>
+                                                <polygon x5="9" y3="-23" style="line-style:normal;line-weight:normal;filling:none;color:black" y5="-7" x4="9" y2="-23" x3="7" y4="-7" x1="-8" closed="false" antialias="false" y1="-6" x2="-6"/>
+                                                <rect style="line-style:normal;line-weight:normal;filling:none;color:black" y="-2" x="11" width="4" antialias="false" height="4"/>
+                                                <rect style="line-style:normal;line-weight:normal;filling:none;color:black" y="-4" x="15" width="4" antialias="false" height="8"/>
+                                                <line style="line-style:normal;line-weight:normal;filling:none;color:black" length2="1.5" end2="none" y2="-2" x1="15" end1="none" antialias="false" length1="1.5" y1="-2" x2="18"/>
+                                                <line style="line-style:normal;line-weight:thin;filling:none;color:black" length2="1.5" end2="none" y2="-8" x1="-4" end1="none" antialias="false" length1="1.5" y1="-21" x2="-5"/>
+                                                <line style="line-style:normal;line-weight:thin;filling:none;color:black" length2="1.5" end2="none" y2="-8" x1="5" end1="none" antialias="false" length1="1.5" y1="-21" x2="7"/>
+                                                <line style="line-style:normal;line-weight:thin;filling:none;color:black" length2="1.5" end2="none" y2="-8" x1="3" end1="none" antialias="false" length1="1.5" y1="-21" x2="4"/>
+                                                <rect style="line-style:normal;line-weight:normal;filling:none;color:black" y="-2" x="-14" width="4" antialias="false" height="4"/>
+                                                <rect style="line-style:normal;line-weight:normal;filling:none;color:black" y="-4" x="-18" width="4" antialias="false" height="8"/>
+                                                <line style="line-style:normal;line-weight:thin;filling:none;color:black" length2="1.5" end2="none" y2="-8" x1="-1" end1="none" antialias="false" length1="1.5" y1="-21" x2="-2"/>
+                                                <line style="line-style:normal;line-weight:normal;filling:none;color:black" length2="1.5" end2="none" y2="-2" x1="-18" end1="none" antialias="false" length1="1.5" y1="-2" x2="-15"/>
+                                                <rect style="line-style:normal;line-weight:normal;filling:none;color:black" y="-21" x="7" width="3" antialias="false" height="3"/>
+                                                <line style="line-style:normal;line-weight:thin;filling:none;color:black" length2="1.5" end2="none" y2="-21" x1="-6" end1="none" antialias="false" length1="1.5" y1="-21" x2="7"/>
+                                                <line style="line-style:normal;line-weight:thin;filling:none;color:black" length2="1.5" end2="none" y2="-8" x1="-8" end1="none" antialias="false" length1="1.5" y1="-8" x2="9"/>
+                                                <polygon x3="6" y7="-6" y4="3" style="line-style:normal;line-weight:normal;filling:none;color:black" x5="11" y3="4" y1="2" y2="4" y8="-6" antialias="false" x4="8" y10="2" x6="11" y5="2" x7="10" y9="-4" y6="-2" closed="false" x10="-10" x1="-10" x2="-5" x8="-8" x9="-10"/>
+                                                <polygon x5="2" y3="-18" style="line-style:normal;line-weight:normal;filling:none;color:black" y5="-14" x4="2" y2="-16" x3="3" y4="-14" x1="2" closed="false" antialias="false" y1="-19" x2="1"/>
+                                                <input text="_" y="9.5" size="4" x="-7" rotate="true" tagg="label"/>
+                                                <terminal y="0" orientation="w" x="-20"/>
+                                                <terminal y="0" orientation="e" x="20"/>
+                                                <terminal y="-20" orientation="e" x="10"/>
+                                            </description>
+                                        </definition>
+                                    </element>
+                                </category>
+                            </category>
+                        </category>
+                        <category name="Solar-termica">
+                            <names>
+                                <name lang="fr">Thermique Solaire</name>
+                                <name lang="en">Solar thermal</name>
+                                <name lang="ca">SOLAR TÈRMICA</name>
+                                <name lang="es">Solar Térmica</name>
+                            </names>
+                            <element name="vaso-expansion.elmt">
+                                <definition ic="true" hotspot_x="20" hotspot_y="32" type="element" width="40" version="0.4" height="50">
+                                    <uuid uuid="{AEB09BD3-B8F0-4401-BCCC-F47B65F6B634}"/>
+                                    <names>
+                                        <name lang="es">Vaso Expansion</name>
+                                        <name lang="fr">Vase d'Expansion</name>
+                                        <name lang="en">Expansion tank</name>
+                                    </names>
+                                    <informations>Rafael Ferrando.
+Mantenimiento de Instalaciones Térmicas</informations>
+                                    <description>
+                                        <arc y="-8.87838" style="line-style:normal;line-weight:normal;filling:none;color:black" start="-90" x="-17" width="1.35" antialias="true" height="1.07069" angle="-180"/>
+                                        <arc y="-27.6154" style="line-style:normal;line-weight:normal;filling:none;color:black" start="-180" x="-16.1" width="31.5" antialias="true" height="8.56549" angle="-180"/>
+                                        <line style="line-style:normal;line-weight:normal;filling:none;color:black" length2="1.5" end2="none" y2="3.96985" x1="-16.1" end1="none" length1="1.5" antialias="false" y1="-22.7973" x2="-16.1"/>
+                                        <arc y="-0.848233" style="line-style:normal;line-weight:normal;filling:none;color:black" start="0" x="-16.1" width="31.5" antialias="true" height="8.56549" angle="-180"/>
+                                        <line style="line-style:normal;line-weight:normal;filling:none;color:black" length2="1.5" end2="none" y2="3.43451" x1="15.4" end1="none" length1="1.5" antialias="false" y1="-23.3326" x2="15.4"/>
+                                        <rect y="-8.87838" style="line-style:normal;line-weight:normal;filling:none;color:black" x="-16.1" width="31.5" antialias="false" height="1.07069"/>
+                                        <rect y="7.71726" style="line-style:normal;line-weight:normal;filling:none;color:black" x="-1.25" width="1.8" antialias="false" height="3.21206"/>
+                                        <arc y="-8.87838" style="line-style:normal;line-weight:normal;filling:none;color:black" start="90" x="15.4" width="0.9" antialias="true" height="1.07069" angle="-180"/>
+                                        <polygon x5="-16" y3="13" style="line-style:normal;line-weight:normal;filling:none;color:black" x4="-14" y5="4" y2="13" x3="-16" y4="6" x1="-16" closed="false" antialias="false" y1="4" x2="-18"/>
+                                        <polygon x5="13" y3="13" style="line-style:normal;line-weight:normal;filling:none;color:black" x4="15" y5="6.16993" y2="13" x3="17" y4="4.21849" x1="13" closed="false" antialias="false" y1="6.16993" x2="15"/>
+                                        <terminal name="" y="10.9293" number="" x="-0.35" orientation="s" nameHidden="1"/>
+                                    </description>
+                                </definition>
+                            </element>
+                        </category>
+                    </category>
+                </category>
+                <category name="31_solar_thermal">
+                    <names>
+                        <name lang="it">Solare Termico</name>
+                        <name lang="fr">Solaire-thermique</name>
+                        <name lang="en">Solar-thermal</name>
+                        <name lang="el">Ηλιακή θέρμανση</name>
+                        <name lang="pl">Instalacje solarne</name>
+                        <name lang="ja">太陽熱</name>
+                        <name lang="de">Solar-Wärmetechnik</name>
+                        <name lang="ar">شمسية-حرارية</name>
+                        <name lang="nl">Zon thermisch</name>
+                        <name lang="es">Solar Térmica</name>
+                        <name lang="da">Sol og varme teknik</name>
+                        <name lang="cs">Sluneční tepelné kolektory</name>
+                    </names>
+                    <category name="ballon_echangeur">
+                        <names>
+                            <name lang="it">Scambiatori</name>
+                            <name lang="fr">Ballon échangeur et autres</name>
+                            <name lang="en">Balloon exchanger</name>
+                            <name lang="pl">Zasobniki, wymienniki i inne</name>
+                            <name lang="de">Speicherbehälter</name>
+                            <name lang="ar">بالونات مُبادلة و أخرى</name>
+                            <name lang="nl">Boilers, wisselaars</name>
+                            <name lang="es">Intercambiador esférico y otros</name>
+                            <name lang="cs">Zásobníky, výměníky tepla a jiné</name>
+                        </names>
+                        <element name="ballon_stock1000l_2.elmt">
+                            <definition ic="true" hotspot_x="33" hotspot_y="81" type="element" width="60" version="0.4" height="130" link_type="simple">
+                                <uuid uuid="{ADFAC5BE-58C9-4EB2-A374-7789E008BBC1}"/>
+                                <names>
+                                    <name lang="ar">خزّان 1000ل</name>
+                                    <name lang="en">Storage tank 1000L</name>
+                                    <name lang="it">Serbatoio 1000L</name>
+                                    <name lang="fr">Ballon Stockage 1000L</name>
+                                    <name lang="pl">Zasobnik 1000L</name>
+                                    <name lang="es">Depósito 1000L</name>
+                                    <name lang="nl">Opslagtank 1000L</name>
+                                    <name lang="ca">Dipòsit 1000L</name>
+                                    <name lang="cs">Zásobník 1000L</name>
+                                </names>
+                                <informations>Author: The QElectroTech team
+License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
+                                <description>
+                                    <ellipse y="-39.2897" style="line-style:normal;line-weight:normal;filling:none;color:black" x="-27.1875" width="3.375" antialias="true" height="3.5766"/>
+                                    <rect y="-66.1142" style="line-style:normal;line-weight:normal;filling:none;color:black" x="-30" width="54" antialias="false" height="95.8527"/>
+                                    <arc y="21.3932" style="line-style:normal;line-weight:normal;filling:none;color:black" start="0" x="-30" width="54" antialias="true" height="17.1677" angle="-180"/>
+                                    <ellipse y="-63.1337" style="line-style:normal;line-weight:normal;filling:none;color:black" x="17.8125" width="3.375" antialias="true" height="3.5766"/>
+                                    <ellipse y="-1.13938" style="line-style:normal;line-weight:normal;filling:none;color:black" x="17.8125" width="3.375" antialias="true" height="3.5766"/>
+                                    <ellipse y="-1.13938" style="line-style:normal;line-weight:normal;filling:none;color:black" x="-27.1875" width="3.375" antialias="true" height="3.5766"/>
+                                    <ellipse y="-39.2897" style="line-style:normal;line-weight:normal;filling:none;color:black" x="17.8125" width="3.375" antialias="true" height="3.5766"/>
+                                    <ellipse y="22.7046" style="line-style:normal;line-weight:normal;filling:none;color:black" x="17.8125" width="3.375" antialias="true" height="3.5766"/>
+                                    <polygon x5="-2.1" y3="40.2299" style="line-style:normal;line-weight:normal;filling:none;color:black" x4="-2.1" y5="38.7993" y2="40.2299" x3="-2.1" y4="38.7993" x1="-3.9" closed="false" antialias="false" y1="38.7993" x2="-3.9"/>
+                                    <arc y="-74.698" style="line-style:normal;line-weight:normal;filling:none;color:black" start="-180" x="-30" width="54" antialias="true" height="17.1677" angle="-180"/>
+                                    <input text="Depósito 1000L_" y="-27" size="4" x="-26" rotate="true" tagg="label"/>
+                                    <ellipse y="-63.1337" style="line-style:normal;line-weight:normal;filling:none;color:black" x="-27.1875" width="3.375" antialias="true" height="3.5766"/>
+                                    <ellipse y="-52.7616" style="line-style:normal;line-weight:normal;filling:none;color:black" x="-3.9" width="1.8" antialias="true" height="1.90752"/>
+                                    <ellipse y="-72.1944" style="line-style:normal;line-weight:normal;filling:none;color:black" x="-4.2375" width="2.475" antialias="true" height="2.62284"/>
+                                    <polygon x5="15" y3="40.7068" style="line-style:normal;line-weight:normal;filling:none;color:black" x4="15" y5="35.938" y2="40.7068" x3="15" y4="35.938" x1="21.75" antialias="true" y1="33.5536" x2="21.75"/>
+                                    <polygon x5="-21" y3="40.7068" style="line-style:normal;line-weight:normal;filling:none;color:black" x4="-21" y5="35.938" y2="40.7068" x3="-21" y4="35.938" x1="-27.75" antialias="true" y1="33.5536" x2="-27.75"/>
+                                    <ellipse y="22.7046" style="line-style:normal;line-weight:normal;filling:none;color:black" x="-27.1875" width="3.375" antialias="true" height="3.5766"/>
+                                    <ellipse y="14.0016" style="line-style:normal;line-weight:normal;filling:none;color:black" x="-3.9" width="1.8" antialias="true" height="1.90752"/>
+                                    <ellipse y="-19.38" style="line-style:normal;line-weight:normal;filling:none;color:black" x="-3.9" width="1.8" antialias="true" height="1.90752"/>
+                                    <terminal y="-61.3454" x="-25.5" orientation="w"/>
+                                    <terminal y="24.4929" x="-25.5" orientation="w"/>
+                                    <terminal y="-70.883" x="-3" orientation="n"/>
+                                    <terminal y="40.2299" x="-3" orientation="s"/>
+                                    <terminal y="-51.8078" x="-3" orientation="e"/>
+                                    <terminal y="-18.4263" x="-3" orientation="e"/>
+                                    <terminal y="14.9553" x="-3" orientation="e"/>
+                                    <terminal y="24.4929" x="19.5" orientation="e"/>
+                                    <terminal y="-61.3454" x="19.5" orientation="e"/>
+                                    <terminal y="-37.5014" x="19.5" orientation="e"/>
+                                    <terminal y="0.648934" x="19.5" orientation="e"/>
+                                    <terminal y="-37.5014" x="-25.5" orientation="w"/>
+                                    <terminal y="0.648934" x="-25.5" orientation="w"/>
+                                </description>
+                            </definition>
+                        </element>
+                        <element name="ballon_demi_strat.elmt">
+                            <definition hotspot_x="65" hotspot_y="121" type="element" width="130" version="0.5" height="250" link_type="simple">
+                                <uuid uuid="{4a15f335-370e-4d8e-88ef-f911c6f544bf}"/>
+                                <names>
+                                    <name lang="cs">Vrstvový zásobník 1000L</name>
+                                    <name lang="pl">Zasobnik warstwowy 1000L</name>
+                                    <name lang="it">Serbatoio a stratificazione 1000L</name>
+                                    <name lang="en">Stratification storage tank 1000L</name>
+                                    <name lang="nl">Opslagtank 1000L</name>
+                                    <name lang="ar">خزّان تراتب</name>
+                                    <name lang="fr">ballon 1000L chicane et strat</name>
+                                    <name lang="es">Tanque de almacenamiento de estratificación 1000L</name>
+                                </names>
+                                <informations>Author: The QElectroTech team
+License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
+                                <description>
+                                    <input text="_" y="140.55" size="9" x="-7" rotate="true" tagg="label"/>
+                                    <input text="2000L" y="73.5" size="9" x="-25" rotate="true" tagg="none"/>
+                                    <rect style="line-style:dotted;line-weight:normal;filling:none;color:black" y="-116" x="-8" width="16" antialias="false" height="232"/>
+                                    <input text="Stockage / Destockage" y="53" rotation="-90" size="7" x="16" rotate="true" tagg="none"/>
+                                    <arc style="line-style:normal;line-weight:normal;filling:none;color:black" start="-180" y="-117.5" x="-60" width="120" antialias="true" height="36" angle="-180"/>
+                                    <line style="line-style:normal;line-weight:normal;filling:none;color:black" length2="1.5" end2="none" y2="0" x1="-10" end1="none" antialias="false" length1="1.5" y1="0" x2="9"/>
+                                    <rect style="line-style:dotted;line-weight:thin;filling:none;color:black" y="-115" x="-2" width="4" antialias="false" height="110"/>
+                                    <circle style="line-style:normal;line-weight:normal;filling:none;color:black" y="98" diameter="4" x="48" antialias="true"/>
+                                    <rect style="line-style:dotted;line-weight:thin;filling:none;color:black" y="5" x="-2" width="4" antialias="false" height="110"/>
+                                    <arc style="line-style:normal;line-weight:normal;filling:none;color:black" start="0" y="82" x="-60" width="120" antialias="true" height="36" angle="-180"/>
+                                    <line style="line-style:normal;line-weight:normal;filling:none;color:black" length2="1.5" end2="none" y2="101" x1="60" end1="none" antialias="true" length1="1.5" y1="-100" x2="60"/>
+                                    <line style="line-style:normal;line-weight:normal;filling:none;color:black" length2="1.5" end2="none" y2="101" x1="-60" end1="none" antialias="false" length1="1.5" y1="-99" x2="-60"/>
+                                    <circle style="line-style:normal;line-weight:normal;filling:none;color:black" y="-112.75" diameter="5.5" x="-2.75" antialias="true"/>
+                                    <input text="Ballon Stratificateur" y="56" rotation="-90" size="7" x="-17" rotate="true" tagg="none"/>
+                                    <circle style="line-style:normal;line-weight:normal;filling:none;color:black" y="-102" diameter="4" x="48" antialias="true"/>
+                                    <circle style="line-style:normal;line-weight:normal;filling:none;color:black" y="107.25" diameter="5.5" x="-2.75" antialias="true"/>
+                                    <polygon y3="124" x5="40" style="line-style:normal;line-weight:normal;filling:none;color:black" x4="40" y5="114" y2="124" x3="40" y4="114" x1="55" antialias="true" y1="109" x2="55"/>
+                                    <polygon y3="124" x5="-40" style="line-style:normal;line-weight:normal;filling:none;color:black" x4="-40" y5="114" y2="124" x3="-40" y4="114" x1="-55" antialias="true" y1="109" x2="-55"/>
+                                    <circle style="line-style:normal;line-weight:normal;filling:none;color:black" y="28" diameter="4" x="48" antialias="true"/>
+                                    <circle style="line-style:normal;line-weight:normal;filling:none;color:black" y="-32" diameter="4" x="48" antialias="true"/>
+                                    <terminal y="-110" x="0" orientation="n"/>
+                                    <terminal y="110" x="0" orientation="s"/>
+                                    <terminal y="100" x="50" orientation="e"/>
+                                    <terminal y="-100" x="50" orientation="e"/>
+                                    <terminal y="-30" x="50" orientation="e"/>
+                                    <terminal y="30" x="50" orientation="e"/>
+                                </description>
+                            </definition>
+                        </element>
+                        <element name="ballon_stock1000l.elmt">
+                            <definition hotspot_x="65" hotspot_y="61" type="element" width="130" version="0.5" height="250" link_type="simple">
+                                <uuid uuid="{1b695f32-6994-4af2-a0a0-893a4e1fddd6}"/>
+                                <names>
+                                    <name lang="cs">Zásobník 1000L</name>
+                                    <name lang="pl">Zasobnik 1000L</name>
+                                    <name lang="it">Serbatoio 1000L</name>
+                                    <name lang="en">Storage tank 1000L</name>
+                                    <name lang="nl">Opslagtank 1000L</name>
+                                    <name lang="ar">خزّان 1000ل</name>
+                                    <name lang="es">Balón de almacenamiento 1000L</name>
+                                    <name lang="fr">Ballon Stockage 1000L</name>
+                                </names>
+                                <informations>Author: The QElectroTech team
+License: see http://qelectrotech.org/wiki/doc/elements_license</informations>
+                                <description>
+                                    <circle style="line-style:normal;line-weight:normal;filling:none;color:black" y="16.25" diameter="7.5" x="-53.75" antialias="true"/>
+                                    <rect style="line-style:normal;line-weight:normal;filling:none;color:black" y="-40" x="-60" width="120" antialias="false" height="201"/>
+                                    <arc style="line-style:normal;line-weight:normal;filling:none;color:black" start="0" y="143.5" x="-60" width="120" antialias="true" height="36" angle="-180"/>
+                                    <circle style="line-style:normal;line-weight:normal;filling:none;color:black" y="-33.75" diameter="7.5" x="46.25" antialias="true"/>
+                                    <circle style="line-style:normal;line-weight:normal;filling:none;color:black" y="96.25" diameter="7.5" x="46.25" antialias="true"/>
+                                    <circle style="line-style:normal;line-weight:normal;filling:none;color:black" y="96.25" diameter="7.5" x="-53.75" antialias="true"/>
+                                    <circle style="line-style:normal;line-weight:normal;filling:none;color:black" y="16.25" diameter="7.5" x="46.25" antialias="true"/>
+                                    <circle style="line-style:normal;line-weight:normal;filling:none;color:black" y="146.25" diameter="7.5" x="46.25" antialias="true"/>
+                                    <polygon y3="183" x5="2" style="line-style:normal;line-weight:normal;filling:none;color:black" x4="2" y5="180" y2="183" x3="2" y4="180" x1="-2" closed="false" antialias="false" y1="180" x2="-2"/>
+                                    <arc style="line-style:normal;line-weight:normal;filling:none;color:black" start="-180" y="-58" x="-60" width="120" antialias="true" height="36" angle="-180"/>
+                                    <input text="  Ballon&#xa;Stockage&#xa;  1000L" y="29" size="7" x="-31" rotate="true" tagg="label"/>
+                                    <circle style="line-style:normal;line-weight:normal;filling:none;color:black" y="-33.75" diameter="7.5" x="-53.75" antialias="true"/>
+                                    <circle style="line-style:normal;line-weight:normal;filling:none;color:black" y="-12" diameter="4" x="-2" antialias="true"/>
+                                    <circle style="line-style:normal;line-weight:normal;filling:none;color:black" y="-52.75" diameter="5.5" x="-2.75" antialias="true"/>
+                                    <polygon y3="184" x5="40" style="line-style:normal;line-weight:normal;filling:none;color:black" x4="40" y5="174" y2="184" x3="40" y4="174" x1="55" antialias="true" y1="169" x2="55"/>
+                                    <polygon y3="184" x5="-40" style="line-style:normal;line-weight:normal;filling:none;color:black" x4="-40" y5="174" y2="184" x3="-40" y4="174" x1="-55" antialias="true" y1="169" x2="-55"/>
+                                    <circle style="line-style:normal;line-weight:normal;filling:none;color:black" y="146.25" diameter="7.5" x="-53.75" antialias="true"/>
+                                    <circle style="line-style:normal;line-weight:normal;filling:none;color:black" y="128" diameter="4" x="-2" antialias="true"/>
+                                    <circle style="line-style:normal;line-weight:normal;filling:none;color:black" y="58" diameter="4" x="-2" antialias="true"/>
+                                    <terminal y="-30" x="-50" orientation="w"/>
+                                    <terminal y="150" x="-50" orientation="w"/>
+                                    <terminal y="-50" x="0" orientation="n"/>
+                                    <terminal y="183" x="0" orientation="s"/>
+                                    <terminal y="-10" x="0" orientation="e"/>
+                                    <terminal y="60" x="0" orientation="e"/>
+                                    <terminal y="130" x="0" orientation="e"/>
+                                    <terminal y="150" x="50" orientation="e"/>
+                                    <terminal y="-30" x="50" orientation="e"/>
+                                    <terminal y="20" x="50" orientation="e"/>
+                                    <terminal y="100" x="50" orientation="e"/>
+                                    <terminal y="20" x="-50" orientation="w"/>
+                                    <terminal y="100" x="-50" orientation="w"/>
+                                </description>
+                            </definition>
+                        </element>
+                    </category>
+                </category>
+            </category>
+        </category>
+    </collection>
+</project>
