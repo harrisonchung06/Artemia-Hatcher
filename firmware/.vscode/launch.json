@@ -12,9 +12,15 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug",
+<<<<<<< HEAD
             "executable": "C:/Users/Harrison/Desktop/Github/Artemia-Hatcher/firmware/.pio/build/ATmega328P/firmware.elf",
             "projectEnvName": "ATmega328P",
             "toolchainBinDir": "C:/Users/Harrison/.platformio/packages/toolchain-atmelavr/bin",
+=======
+            "executable": "C:/Users/harrisonc/Downloads/Artemia-Hatcher/firmware/.pio/build/ATmega328P/firmware.elf",
+            "projectEnvName": "ATmega328P",
+            "toolchainBinDir": "C:/Users/harrisonc/.platformio/packages/toolchain-atmelavr/bin",
+>>>>>>> 670712a (Branch Updates)
             "internalConsoleOptions": "openOnSessionStart",
             "preLaunchTask": {
                 "type": "PlatformIO",
@@ -25,18 +31,30 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (skip Pre-Debug)",
+<<<<<<< HEAD
             "executable": "C:/Users/Harrison/Desktop/Github/Artemia-Hatcher/firmware/.pio/build/ATmega328P/firmware.elf",
             "projectEnvName": "ATmega328P",
             "toolchainBinDir": "C:/Users/Harrison/.platformio/packages/toolchain-atmelavr/bin",
+=======
+            "executable": "C:/Users/harrisonc/Downloads/Artemia-Hatcher/firmware/.pio/build/ATmega328P/firmware.elf",
+            "projectEnvName": "ATmega328P",
+            "toolchainBinDir": "C:/Users/harrisonc/.platformio/packages/toolchain-atmelavr/bin",
+>>>>>>> 670712a (Branch Updates)
             "internalConsoleOptions": "openOnSessionStart"
         },
         {
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (without uploading)",
+<<<<<<< HEAD
             "executable": "C:/Users/Harrison/Desktop/Github/Artemia-Hatcher/firmware/.pio/build/ATmega328P/firmware.elf",
             "projectEnvName": "ATmega328P",
             "toolchainBinDir": "C:/Users/Harrison/.platformio/packages/toolchain-atmelavr/bin",
+=======
+            "executable": "C:/Users/harrisonc/Downloads/Artemia-Hatcher/firmware/.pio/build/ATmega328P/firmware.elf",
+            "projectEnvName": "ATmega328P",
+            "toolchainBinDir": "C:/Users/harrisonc/.platformio/packages/toolchain-atmelavr/bin",
+>>>>>>> 670712a (Branch Updates)
             "internalConsoleOptions": "openOnSessionStart",
             "loadMode": "manual"
         }
