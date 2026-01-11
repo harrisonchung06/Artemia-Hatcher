@@ -5,7 +5,7 @@
 #define in2 13
 
 int speed = 255; //0 to 255
-bool rotateCCW = false; 
+bool rotateCCW = true; 
 int d = 1000;
 const int button_pin = 7; 
 int button_state; 
@@ -26,20 +26,20 @@ void setup() {
   
   analogWrite(enA, speed); // Set the speed 
 
-  //pinMode(LED_BUILTIN, OUTPUT);
-  //pinMode(button_pin, INPUT_PULLUP);
+  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(button_pin, INPUT_PULLUP);
   //Serial.begin(9600); 
 }
 
 void loop() {
   //Serial.println(digitalRead(button_pin)); 
-  /*
+  
   button_state = digitalRead(button_pin);
   if (button_state == HIGH){
     digitalWrite(LED_BUILTIN, HIGH);
   } else{
     digitalWrite(LED_BUILTIN, LOW); 
   }
-  */
+  
 }
 
