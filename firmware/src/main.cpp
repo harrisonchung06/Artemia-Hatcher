@@ -38,7 +38,7 @@ int button_state;
 
 void setup() {
   //initMotorDriver(enA, inA1, inA2, speedA, rotA); 
-  //initMotorDriver(enB, inB1, inB2, speedB, rotB); 
+  initMotorDriver(enB, inB1, inB2, speedB, rotB); 
   initMotorDriver(enC, inC1, inC2, speedC, rotC); 
 
   stopMotor(inA1, inA2);
