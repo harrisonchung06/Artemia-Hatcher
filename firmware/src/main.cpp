@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-//A motor is the drain, B motor is the output, C motor is the input  
+//A motor is the drain, B motor is the yield, C motor is the input water source   
 
 #define enA 5
 #define enB 6
@@ -26,9 +26,9 @@ int speedB = 255;
 int speedC = 255; 
 //Speed between 0 to 255
 
-bool rotA = true; 
-bool rotB = true; 
-bool rotC = false; 
+bool rotA = false; 
+bool rotB = false; 
+bool rotC = true; 
 //Does the motor spin counterclockwise?
 
 int d = 1000;
@@ -37,9 +37,13 @@ int button_state;
 //Button Parameters 
 
 void setup() {
-  initMotorDriver(enA, inA1, inA2, speedA, rotA); 
+  //initMotorDriver(enA, inA1, inA2, speedA, rotA); 
   //initMotorDriver(enB, inB1, inB2, speedB, rotB); 
-  //initMotorDriver(enC, inC1, inC2, speedC, rotC); 
+  initMotorDriver(enC, inC1, inC2, speedC, rotC); 
+
+  stopMotor(inA1, inA2);
+  stopMotor(inB1, inB2);
+  stopMotor(inC1, inB2); 
 
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(button_pin, INPUT_PULLUP);
@@ -52,16 +56,17 @@ void loop() {
   button_state = digitalRead(button_pin);
   if (button_state == HIGH){
     digitalWrite(LED_BUILTIN, HIGH);
-    startMotor(inA1, inA2, rotA);
+    //startMotor(inA1, inA2, rotA);
     //startMotor(inB1, inB2, rotB); 
-    //startMotor(inC1, inC2, rotC);
+    startMotor(inC1, inC2, rotC);
   } else{
     digitalWrite(LED_BUILTIN, LOW); 
     stopMotor(inA1, inA2);
     stopMotor(inB1, inB2);
     stopMotor(inC1, inC2);
   }
-  delay(1000);
+  delay(1000); 
+  //Debounce 
   
 }
 
