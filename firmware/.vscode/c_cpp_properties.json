@@ -9,6 +9,7 @@
             "name": "PlatformIO",
             "includePath": [
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "C:/Users/harrisonc/Downloads/Artemia-Hatcher/firmware/src",
                 "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/libraries/Wire/src",
 =======
@@ -28,11 +29,26 @@
                 "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/libraries/Wire/src",
 >>>>>>> 8275f14 (Update)
                 "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/libraries/Wire1/src",
+=======
+                "C:/Users/Harrison/Desktop/Github/Artemia-Hatcher/firmware/include",
+                "C:/Users/Harrison/Desktop/Github/Artemia-Hatcher/firmware/src",
+                "C:/Users/Harrison/.platformio/packages/framework-arduino-avr-minicore/cores/MiniCore",
+                "C:/Users/Harrison/.platformio/packages/framework-arduino-avr-minicore/variants/standard",
+                "C:/Users/Harrison/.platformio/packages/framework-arduino-avr-minicore/libraries/AVR_examples/src",
+                "C:/Users/Harrison/.platformio/packages/framework-arduino-avr-minicore/libraries/EEPROM/src",
+                "C:/Users/Harrison/.platformio/packages/framework-arduino-avr-minicore/libraries/Flash/src",
+                "C:/Users/Harrison/.platformio/packages/framework-arduino-avr-minicore/libraries/SPI/src",
+                "C:/Users/Harrison/.platformio/packages/framework-arduino-avr-minicore/libraries/SPI1/src",
+                "C:/Users/Harrison/.platformio/packages/framework-arduino-avr-minicore/libraries/SoftwareSerial/src",
+                "C:/Users/Harrison/.platformio/packages/framework-arduino-avr-minicore/libraries/Wire/src",
+                "C:/Users/Harrison/.platformio/packages/framework-arduino-avr-minicore/libraries/Wire1/src",
+>>>>>>> af6f604 (Update Firmware)
                 ""
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
+<<<<<<< HEAD
 <<<<<<< HEAD
                     "C:/Users/harrisonc/Downloads/Artemia-Hatcher/firmware/src",
                     "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/libraries/Wire/src",
@@ -53,6 +69,20 @@
                     "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/libraries/Wire/src",
 >>>>>>> 8275f14 (Update)
                     "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/libraries/Wire1/src",
+=======
+                    "C:/Users/Harrison/Desktop/Github/Artemia-Hatcher/firmware/include",
+                    "C:/Users/Harrison/Desktop/Github/Artemia-Hatcher/firmware/src",
+                    "C:/Users/Harrison/.platformio/packages/framework-arduino-avr-minicore/cores/MiniCore",
+                    "C:/Users/Harrison/.platformio/packages/framework-arduino-avr-minicore/variants/standard",
+                    "C:/Users/Harrison/.platformio/packages/framework-arduino-avr-minicore/libraries/AVR_examples/src",
+                    "C:/Users/Harrison/.platformio/packages/framework-arduino-avr-minicore/libraries/EEPROM/src",
+                    "C:/Users/Harrison/.platformio/packages/framework-arduino-avr-minicore/libraries/Flash/src",
+                    "C:/Users/Harrison/.platformio/packages/framework-arduino-avr-minicore/libraries/SPI/src",
+                    "C:/Users/Harrison/.platformio/packages/framework-arduino-avr-minicore/libraries/SPI1/src",
+                    "C:/Users/Harrison/.platformio/packages/framework-arduino-avr-minicore/libraries/SoftwareSerial/src",
+                    "C:/Users/Harrison/.platformio/packages/framework-arduino-avr-minicore/libraries/Wire/src",
+                    "C:/Users/Harrison/.platformio/packages/framework-arduino-avr-minicore/libraries/Wire1/src",
+>>>>>>> af6f604 (Update Firmware)
                     ""
                 ]
             },
@@ -67,7 +97,7 @@
             ],
             "cStandard": "gnu11",
             "cppStandard": "gnu++17",
-            "compilerPath": "C:/Users/harrisonc/.platformio/packages/toolchain-atmelavr/bin/avr-gcc.exe",
+            "compilerPath": "C:/Users/Harrison/.platformio/packages/toolchain-atmelavr/bin/avr-gcc.exe",
             "compilerArgs": [
                 "-mmcu=atmega328p",
                 ""

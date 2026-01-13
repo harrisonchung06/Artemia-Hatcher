@@ -51,6 +51,7 @@ const int button_pin = 4;
 int button_state; 
 //Button Parameters 
 
+<<<<<<< HEAD
 float v = 1.33; //Volume in liters 
 float flowRate = 0.06; //Liters per minute 
 
@@ -58,6 +59,10 @@ byte reg[3] = {0x00,0x01,0x02};
 byte val[3]; 
 byte* ptr; 
 int curr_time = 0; //Timer variable 
+=======
+int v = 1;
+//Volume in liters 
+>>>>>>> af6f604 (Update Firmware)
 
 void setup() {
   //initMotorDriver(enA, inA1, inA2, speedA, rotA); 
@@ -114,7 +119,11 @@ void loop() {
     stopMotor(inB1, inB2);
     stopMotor(inC1, inC2);
   }
+<<<<<<< HEAD
   */
+=======
+  
+>>>>>>> af6f604 (Update Firmware)
 }
 
 void initMotorDriver(int en, int in1, int in2, int speed, bool rotCCW){
