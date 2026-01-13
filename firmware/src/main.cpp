@@ -27,14 +27,17 @@ int speedC = 255;
 //Speed between 0 to 255
 
 bool rotA = false; 
-bool rotB = false; 
-bool rotC = true; 
+bool rotB = true; 
+bool rotC = false; 
 //Does the motor spin counterclockwise?
 
 int d = 1000;
 const int button_pin = 4; 
 int button_state; 
 //Button Parameters 
+
+int v = 1;
+//Volume in liters 
 
 void setup() {
   //initMotorDriver(enA, inA1, inA2, speedA, rotA); 
@@ -56,17 +59,30 @@ void loop() {
   button_state = digitalRead(button_pin);
   if (button_state == HIGH){
     digitalWrite(LED_BUILTIN, HIGH);
-    //startMotor(inA1, inA2, rotA);
-    //startMotor(inB1, inB2, rotB); 
     startMotor(inC1, inC2, rotC);
+    //Timer 9 minutes 
+    delay(1000);
+    stopMotor(inC1, inC2);
+    //Wait 30 hours 
+    delay(1000);
+    //Drain open
+    startMotor(inC1, inC2, rotC); // Flush
+    //Timer 10 minutes 
+    //Drain close 
+    //Timer 3 minutes 
+    delay(1000);
+    stopMotor(inC1, inC2);
+    startMotor(inB1, inB2, rotB); //Yield 
+    //Timer 1 minutes
+    delay(1000);
+    stopMotor(inB1, inB2);
+    
   } else{
     digitalWrite(LED_BUILTIN, LOW); 
     stopMotor(inA1, inA2);
     stopMotor(inB1, inB2);
     stopMotor(inC1, inC2);
   }
-  delay(1000); 
-  //Debounce 
   
 }
 
