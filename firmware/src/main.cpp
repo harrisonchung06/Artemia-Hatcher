@@ -55,7 +55,7 @@ void setup() {
 
 void loop() {
   //Serial.println(digitalRead(button_pin)); 
-
+  /*
   button_state = digitalRead(button_pin);
   if (button_state == HIGH){
     digitalWrite(LED_BUILTIN, HIGH);
@@ -83,6 +83,9 @@ void loop() {
     stopMotor(inB1, inB2);
     stopMotor(inC1, inC2);
   }
+  */
+
+  
   
 }
 
