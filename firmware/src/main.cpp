@@ -83,7 +83,7 @@ void loop() {
     stopMotor(inB1, inB2);
     stopMotor(inC1, inC2);
   }
-  
+  */
 }
 
 void initMotorDriver(int en, int in1, int in2, int speed, bool rotCCW){
