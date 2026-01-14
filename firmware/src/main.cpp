@@ -114,3 +114,15 @@ void startMotor(int in1, int in2, bool rotCCW){
   }
   //Set rotation direction
 }
+
+void sleep_timer(int time, int del){
+  //mc low power
+  //motor low power with mosfet 
+  //set time to 0 
+  //while signal not here yet/curr_time not > time 
+    //check time and update curr_time 
+    //delay(del);
+}
+
+
+//NBALAJHAHANJANJDADJAWDAWNA
