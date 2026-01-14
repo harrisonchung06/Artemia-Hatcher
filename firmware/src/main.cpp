@@ -21,6 +21,8 @@ void stopMotor(int in1, int in2);
 
 void startMotor(int in1, int in2, bool rotCCW);
 
+void sleep_timer(int time, int del); //Timer function in minutes, how often to check time 
+
 int speedA = 30;
 int speedB = 255;
 int speedC = 255; 
@@ -36,8 +38,9 @@ const int button_pin = 4;
 int button_state; 
 //Button Parameters 
 
-int v = 1;
-//Volume in liters 
+float v = 1.33; //Volume in liters 
+float flowRate = 0.06; //Liters per minute 
+int curr_time = 0; 
 
 void setup() {
   //initMotorDriver(enA, inA1, inA2, speedA, rotA); 
@@ -59,14 +62,16 @@ void loop() {
   button_state = digitalRead(button_pin);
   if (button_state == HIGH){
     digitalWrite(LED_BUILTIN, HIGH);
+    //Built in LED indicator on 
     startMotor(inC1, inC2, rotC);
+    //Start Filling Tank 
     //Timer 9 minutes 
-    delay(1000);
     stopMotor(inC1, inC2);
+    //Stop filling 
     //Wait 30 hours 
-    delay(1000);
     //Drain open
-    startMotor(inC1, inC2, rotC); // Flush
+    startMotor(inC1, inC2, rotC); 
+    //Flush
     //Timer 10 minutes 
     //Drain close 
     //Timer 3 minutes 
@@ -84,9 +89,6 @@ void loop() {
     stopMotor(inC1, inC2);
   }
   */
-
-  
-  
 }
 
 void initMotorDriver(int en, int in1, int in2, int speed, bool rotCCW){
@@ -116,4 +118,13 @@ void startMotor(int in1, int in2, bool rotCCW){
     digitalWrite(in2, LOW); 
   }
   //Set rotation direction
+}
+
+void sleep_timer(int time, int del){
+  //mc low power
+  //motor low power with mosfet 
+  //set time to 0 
+  //while signal not here yet/curr_time not > time 
+    //check time and update curr_time 
+    //delay(del);
 }
