@@ -167,15 +167,10 @@ void setClockZero(){ //Set microcontroller clock to zero
   Wire.write(0x00);
   Wire.write(decToBcd(0));
   //Write seconds 
-
-  Wire.write(0x01);
   Wire.write(decToBcd(0));
-  //Write minutes 
-
-  Wire.write(0x02);
-  Wire.write(decToBcd(0)); 
-  //Write hours 
-
+  //Write minutes
+  Wire.write(decToBcd(0));
+  //Write Hours 
   Wire.endTransmission(); 
 }
 
@@ -196,5 +191,6 @@ byte decToBcd(byte data){
 byte bcdToDec(byte data){
   return ( (data/16*10) + (data%16) );
 }
+//Helper Functions 
 
 
