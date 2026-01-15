@@ -1,7 +1,9 @@
 #include <Arduino.h>
+#include <Wire.h>
 
 //A motor is the drain, B motor is the yield, C motor is the input water source   
 
+//Define Pinout
 #define enA 5
 #define enB 6
 #define enC 11 
@@ -13,13 +15,26 @@
 #define inB2 10
 
 #define inC1 12
-#define inC2 2
+#define inC2 3
+
+#define CLK_INT 2 
+#define CLK_ADD 0x68
 
 void initMotorDriver(int en, int in1, int in2, int speed, bool rotCCW); 
 
 void stopMotor(int in1, int in2); 
 
 void startMotor(int in1, int in2, bool rotCCW);
+
+void sleepTimer(int time); //Timer function in minutes, how often to check time
+
+void setClockZero();
+
+byte decToBcd(byte data); 
+
+byte bcdToDec(byte data); 
+
+byte* getLocalTime();
 
 int speedA = 30;
 int speedB = 255;
@@ -36,8 +51,13 @@ const int button_pin = 4;
 int button_state; 
 //Button Parameters 
 
-int v = 1;
-//Volume in liters 
+float v = 1.33; //Volume in liters 
+float flowRate = 0.06; //Liters per minute 
+
+byte reg[3] = {0x00,0x01,0x02};
+byte val[3]; 
+byte* ptr; 
+int curr_time = 0; //Timer variable 
 
 void setup() {
   //initMotorDriver(enA, inA1, inA2, speedA, rotA); 
@@ -50,12 +70,23 @@ void setup() {
 
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(button_pin, INPUT_PULLUP);
-  //Serial.begin(9600); 
+  
+  Wire.begin();
+
+  setClockZero(); 
+
+  Serial.begin(9600); 
 }
 
 void loop() {
-  //Serial.println(digitalRead(button_pin)); 
 
+  ptr = getLocalTime();
+  Serial.print(ptr[0],DEC);
+  Serial.print(ptr[1],DEC);
+  Serial.println(ptr[2],DEC);
+  delay(1000); 
+  //Serial.println(digitalRead(button_pin)); 
+  /*
   button_state = digitalRead(button_pin);
   if (button_state == HIGH){
     digitalWrite(LED_BUILTIN, HIGH);
@@ -115,14 +146,55 @@ void startMotor(int in1, int in2, bool rotCCW){
   //Set rotation direction
 }
 
-void sleep_timer(int time, int del){
-  //mc low power
+void sleepTimer(int time){
+
   //motor low power with mosfet 
+  //set timer 
+  //mc low power
+  //wait until rtc send alarm signal 
+  //mc wakeup 
+
+
   //set time to 0 
   //while signal not here yet/curr_time not > time 
     //check time and update curr_time 
     //delay(del);
 }
 
+void setClockZero(){ //Set microcontroller clock to zero 
+  Wire.beginTransmission(CLK_ADD);
 
-//NBALAJHAHANJANJDADJAWDAWNA
+  Wire.write(0x00);
+  Wire.write(decToBcd(0));
+  //Write seconds 
+
+  Wire.write(0x01);
+  Wire.write(decToBcd(0));
+  //Write minutes 
+
+  Wire.write(0x02);
+  Wire.write(decToBcd(0)); 
+  //Write hours 
+
+  Wire.endTransmission(); 
+}
+
+byte* getLocalTime() { //Time local to the microcontroller 
+  for (int i = 0; i<3; i++){
+    Wire.beginTransmission(CLK_ADD);
+    Wire.write(reg[i]);
+    Wire.endTransmission();
+    Wire.requestFrom(CLK_ADD, 1); 
+    val[i] = bcdToDec(Wire.read());
+  }
+  return val; 
+}
+
+byte decToBcd(byte data){
+  return ( (data/10*16) + (data%10) );
+}
+byte bcdToDec(byte data){
+  return ( (data/16*10) + (data%16) );
+}
+
+
