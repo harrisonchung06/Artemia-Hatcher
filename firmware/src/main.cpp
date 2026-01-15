@@ -48,6 +48,8 @@ int speedC = 255;
 bool rotA = false; 
 bool rotB = true; 
 bool rotC = false; 
+bool rotB = true; 
+bool rotC = false; 
 //Does the motor spin counterclockwise?
 
 int d = 1000;
@@ -77,6 +79,7 @@ int curr_time = 0;
 void setup() {
   //initMotorDriver(enA, inA1, inA2, speedA, rotA); 
   initMotorDriver(enB, inB1, inB2, speedB, rotB); 
+  initMotorDriver(enB, inB1, inB2, speedB, rotB); 
   initMotorDriver(enC, inC1, inC2, speedC, rotC); 
 
   stopMotor(inA1, inA2);
@@ -102,11 +105,31 @@ void loop() {
   delay(1000); 
   //Serial.println(digitalRead(button_pin)); 
   /*
+  /*
   button_state = digitalRead(button_pin);
   if (button_state == HIGH){
     digitalWrite(LED_BUILTIN, HIGH);
     //Built in LED indicator on 
+    //Built in LED indicator on 
     startMotor(inC1, inC2, rotC);
+    //Start Filling Tank 
+    //Timer 9 minutes 
+    stopMotor(inC1, inC2);
+    //Stop filling 
+    //Wait 30 hours 
+    //Drain open
+    startMotor(inC1, inC2, rotC); 
+    //Flush
+    //Timer 10 minutes 
+    //Drain close 
+    //Timer 3 minutes 
+    delay(1000);
+    stopMotor(inC1, inC2);
+    startMotor(inB1, inB2, rotB); //Yield 
+    //Timer 1 minutes
+    delay(1000);
+    stopMotor(inB1, inB2);
+    
     //Start Filling Tank 
     //Timer 9 minutes 
     stopMotor(inC1, inC2);
