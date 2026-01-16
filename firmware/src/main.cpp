@@ -76,6 +76,7 @@ float flowRate = 0.06; //Liters per minute
 byte reg[3] = {0x00,0x01,0x02};
 byte val[3]; 
 byte* ptr; 
+bool flag = false; 
 
 void setup() {
   Serial.begin(9600); 
@@ -96,14 +97,14 @@ void setup() {
   attachInterrupt(digitalPinToInterrupt(CLK_INT), onInterrupt, FALLING); 
 
   setClockZero(); 
+  setAlarm1(5,0,0);
 }
 
 void loop() {
-  setClockZero(); 
-  setAlarm1(5,0,0);
-  delay(5000);
-  Serial.println("Done");
+  delay(1000); 
+  Serial.println("timer");
   Serial.println(digitalRead(CLK_INT));
+  Serial.println(flag); 
   //Serial.println(digitalRead(button_pin)); 
   /*
   button_state = digitalRead(button_pin);
@@ -167,7 +168,7 @@ void startMotor(int in1, int in2, bool rotCCW){
 //Motor Functions
 
 void onInterrupt(){
-  Serial.println("Wake up!!!"); 
+  flag = true; 
 }
 
 void sleepTimer(int time){
@@ -233,7 +234,7 @@ void setAlarm1(byte second, byte minute, byte hour){
   minute &= 0b01111111;
   hour &= 0b01111111;
   //Bitwise operator to enable matching (Mask bit)
-  Wire.write(CLK_ADD);
+  Wire.beginTransmission(CLK_ADD); 
   Wire.write(CLK_ALARM1_REG);
   Wire.write(second);
   Wire.write(minute);
