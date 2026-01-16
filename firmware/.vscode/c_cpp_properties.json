@@ -10,8 +10,10 @@
             "includePath": [
                 "C:/Users/harrisonc/Downloads/Artemia-Hatcher/firmware/src",
                 "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/libraries/Wire/src",
+                "C:/Users/harrisonc/Downloads/Artemia-Hatcher/firmware/.pio/libdeps/ATmega328P/Arduino Low Power/src",
                 "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/cores/MiniCore",
                 "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/variants/standard",
+                "C:/Users/harrisonc/Downloads/Artemia-Hatcher/firmware/.pio/libdeps/ATmega328P/RTCZero/src",
                 "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/libraries/AVR_examples/src",
                 "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/libraries/EEPROM/src",
                 "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/libraries/Flash/src",
@@ -26,8 +28,10 @@
                 "path": [
                     "C:/Users/harrisonc/Downloads/Artemia-Hatcher/firmware/src",
                     "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/libraries/Wire/src",
+                    "C:/Users/harrisonc/Downloads/Artemia-Hatcher/firmware/.pio/libdeps/ATmega328P/Arduino Low Power/src",
                     "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/cores/MiniCore",
                     "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/variants/standard",
+                    "C:/Users/harrisonc/Downloads/Artemia-Hatcher/firmware/.pio/libdeps/ATmega328P/RTCZero/src",
                     "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/libraries/AVR_examples/src",
                     "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/libraries/EEPROM/src",
                     "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/libraries/Flash/src",

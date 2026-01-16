@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include <Wire.h>
+#include <ArduinoLowPower.h>
 
 //A motor is the drain, B motor is the yield, C motor is the input water source   
 
@@ -30,7 +31,7 @@ void stopMotor(int in1, int in2);
 
 void startMotor(int in1, int in2, bool rotCCW);
 
-void sleepTimer(int time); //Timer function in minutes, how often to check time
+void sleepTimer(int secs, int mins, int hours); //Timer function in minutes
 
 void setClockZero();
 
@@ -76,7 +77,6 @@ float flowRate = 0.06; //Liters per minute
 byte reg[3] = {0x00,0x01,0x02};
 byte val[3]; 
 byte* ptr; 
-bool flag = false; 
 
 void setup() {
   Serial.begin(9600); 
@@ -95,18 +95,13 @@ void setup() {
 
   pinMode(CLK_INT, INPUT_PULLUP); 
   attachInterrupt(digitalPinToInterrupt(CLK_INT), onInterrupt, FALLING); 
+  LowPower.attachInterruptWakeup(CLK_INT, onInterrupt, FALLING); 
 
   setClockZero(); 
-  setAlarm1(5,0,0);
 }
 
 void loop() {
-  delay(1000); 
-  Serial.println("timer");
-  Serial.println(digitalRead(CLK_INT));
-  Serial.println(flag); 
   //Serial.println(digitalRead(button_pin)); 
-  /*
   button_state = digitalRead(button_pin);
   if (button_state == HIGH){
     digitalWrite(LED_BUILTIN, HIGH);
@@ -134,7 +129,6 @@ void loop() {
     stopMotor(inB1, inB2);
     stopMotor(inC1, inC2);
   }
-  */
 }
 
 void initMotorDriver(int en, int in1, int in2, int speed, bool rotCCW){
@@ -168,22 +162,14 @@ void startMotor(int in1, int in2, bool rotCCW){
 //Motor Functions
 
 void onInterrupt(){
-  flag = true; 
+   unarmAlarm1();
+   clearAlarm1(); 
 }
 
-void sleepTimer(int time){
-
-  //motor low power with mosfet 
-  //set timer 
-  //mc low power
-  //wait until rtc send alarm signal 
-  //mc wakeup 
-
-
-  //set time to 0 
-  //while signal not here yet/curr_time not > time 
-    //check time and update curr_time 
-    //delay(del);
+void sleepTimer(int secs, int mins, int hours){
+  setClockZero();
+  setAlarm1(secs, mins, hours); 
+  LowPower.deepSleep(); //Infinite deep sleep 
 }
 
 void setClockZero(){ //Set microcontroller clock to zero 
