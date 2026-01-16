@@ -53,8 +53,6 @@ byte decToBcd(byte data);
 
 byte bcdToDec(byte data); 
 
-byte* getLocalTime();
-
 
 int speedA = 30;
 int speedB = 255;
@@ -73,10 +71,6 @@ int button_state;
 
 float v = 1.33; //Volume in liters 
 float flowRate = 0.06; //Liters per minute 
-
-byte reg[3] = {0x00,0x01,0x02};
-byte val[3]; 
-byte* ptr; 
 
 void setup() {
   Serial.begin(9600); 
@@ -100,51 +94,30 @@ void setup() {
 }
 
 void loop() {
-  /*
-  setAlarm1(5,0,0);
-  delay(1000); 
-  Serial.println("timer");
-  Serial.println(digitalRead(CLK_INT)); 
-  if (digitalRead(CLK_INT) == 0 ){
-    setClockZero();
-  }
-  */
-  Serial.println("Sleep 5");
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(1000);
-  sleepTimer(5,0, 0);
-  digitalWrite(LED_BUILTIN, LOW); 
-  Serial.println("Done");
-  //Serial.println(digitalRead(button_pin)); 
-  /*
   button_state = digitalRead(button_pin);
   if (button_state == HIGH){
     digitalWrite(LED_BUILTIN, HIGH);
     startMotor(inC1, inC2, rotC);
-    //Timer 9 minutes 
-    delay(1000);
+    sleepTimer(5,0,0); //sleepTimer(0,9,0); 
     stopMotor(inC1, inC2);
-    //Wait 30 hours 
-    delay(1000);
+    sleepTimer(5,0,0); //sleepTimer(0,0,30);  
     //Drain open
     startMotor(inC1, inC2, rotC); // Flush
-    //Timer 10 minutes 
+    sleepTimer(5,0,0); //sleepTimer(0,10,0);
     //Drain close 
-    //Timer 3 minutes 
-    delay(1000);
+    sleepTimer(5,0,0); //sleepTimer(0,3,0); 
     stopMotor(inC1, inC2);
     startMotor(inB1, inB2, rotB); //Yield 
-    //Timer 1 minutes
-    delay(1000);
+    sleepTimer(5,0,0); //sleepTimer(0,1,0);
     stopMotor(inB1, inB2);
     
+    sleepTimer(0,0,999); 
   } else{
     digitalWrite(LED_BUILTIN, LOW); 
     stopMotor(inA1, inA2);
     stopMotor(inB1, inB2);
     stopMotor(inC1, inC2);
   }
-  */
 }
 
 void initMotorDriver(int en, int in1, int in2, int speed, bool rotCCW){
@@ -177,9 +150,6 @@ void startMotor(int in1, int in2, bool rotCCW){
 }
 //Motor Functions
 
-void onInterrupt(){
-}
-
 void sleepTimer(int secs, int mins, int hours){
   setClockZero();
   setAlarm1(secs, mins, hours); 
@@ -197,24 +167,6 @@ void setClockZero(){ //Set microcontroller clock to zero
   Wire.write(decToBcd(0));
   //Write Hours 
   Wire.endTransmission(); 
-}
-
-byte* getLocalTime() { //Time local to the microcontroller 
-  for (int i = 0; i<3; i++){
-    Wire.beginTransmission(CLK_ADD);
-    Wire.write(reg[i]);
-    Wire.endTransmission();
-    Wire.requestFrom(CLK_ADD, 1); 
-    val[i] = bcdToDec(Wire.read());
-  }
-  return val; 
-}
-
-byte decToBcd(byte data){
-  return ( (data/10*16) + (data%10) );
-}
-byte bcdToDec(byte data){
-  return ( (data/16*10) + (data%16) );
 }
 
 void setAlarm1(byte second, byte minute, byte hour){
@@ -286,7 +238,17 @@ void writeRegister(uint8_t reg, uint8_t val){
   Wire.endTransmission();
 }
 
+byte decToBcd(byte data){
+  return ( (data/10*16) + (data%10) );
+}
+byte bcdToDec(byte data){
+  return ( (data/16*10) + (data%16) );
+}
+
 //Timer Functions 
 
+void onInterrupt(){
+  //Service Function
+}
 
 
