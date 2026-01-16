@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <Wire.h>
-#include <ArduinoLowPower.h>
+#include <LowPower.h>
 
 //A motor is the drain, B motor is the yield, C motor is the input water source   
 
@@ -95,13 +95,28 @@ void setup() {
 
   pinMode(CLK_INT, INPUT_PULLUP); 
   attachInterrupt(digitalPinToInterrupt(CLK_INT), onInterrupt, FALLING); 
-  LowPower.attachInterruptWakeup(CLK_INT, onInterrupt, FALLING); 
 
   setClockZero(); 
 }
 
 void loop() {
+  /*
+  setAlarm1(5,0,0);
+  delay(1000); 
+  Serial.println("timer");
+  Serial.println(digitalRead(CLK_INT)); 
+  if (digitalRead(CLK_INT) == 0 ){
+    setClockZero();
+  }
+  */
+  Serial.println("Sleep 5");
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000);
+  sleepTimer(5,0, 0);
+  digitalWrite(LED_BUILTIN, LOW); 
+  Serial.println("Done");
   //Serial.println(digitalRead(button_pin)); 
+  /*
   button_state = digitalRead(button_pin);
   if (button_state == HIGH){
     digitalWrite(LED_BUILTIN, HIGH);
@@ -129,6 +144,7 @@ void loop() {
     stopMotor(inB1, inB2);
     stopMotor(inC1, inC2);
   }
+  */
 }
 
 void initMotorDriver(int en, int in1, int in2, int speed, bool rotCCW){
@@ -162,14 +178,12 @@ void startMotor(int in1, int in2, bool rotCCW){
 //Motor Functions
 
 void onInterrupt(){
-   unarmAlarm1();
-   clearAlarm1(); 
 }
 
 void sleepTimer(int secs, int mins, int hours){
   setClockZero();
   setAlarm1(secs, mins, hours); 
-  LowPower.deepSleep(); //Infinite deep sleep 
+  LowPower.powerDown(SLEEP_FOREVER, ADC_OFF, BOD_OFF); //Low power 
 }
 
 void setClockZero(){ //Set microcontroller clock to zero 
