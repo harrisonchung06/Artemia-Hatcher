@@ -3,8 +3,8 @@
 #include <LowPower.h>
 
 /*
-A motor is the drain
-B motor is the yield
+A motor is the yield 
+B motor is the drain
 C motor is the input water source   
 */
 
@@ -67,7 +67,7 @@ byte decToBcd(byte data);
 byte bcdToDec(byte data); 
 
 //Speed between 0 to 255
-int speedA = 30;
+int speedA = 255;
 int speedB = 255;
 int speedC = 255; 
 
@@ -112,22 +112,37 @@ void loop() {
   buttonState = digitalRead(BUTTON);
   if (buttonState == HIGH){
     digitalWrite(LED_BUILTIN, HIGH);
+
+    startMotor(inB1, inB2, rotB);
+    sleepTimer(0,10,0); //Setup initial conditions (all drained)
+    stopMotor(inB1, inB2); 
+
     startMotor(inC1, inC2, rotC);
-    sleepTimer(5,0,0); //sleepTimer(0,9,0); 
+    sleepTimer(0,9,0); //Fill all 
     stopMotor(inC1, inC2);
-    sleepTimer(5,0,0); //sleepTimer(0,0,30);  
-    //Drain open
-    startMotor(inC1, inC2, rotC); // Flush
-    sleepTimer(5,0,0); //sleepTimer(0,10,0);
-    //Drain close 
-    sleepTimer(5,0,0); //sleepTimer(0,3,0); 
-    stopMotor(inC1, inC2);
-    startMotor(inB1, inB2, rotB); //Yield 
-    sleepTimer(5,0,0); //sleepTimer(0,1,0);
-    stopMotor(inB1, inB2);
+
+    sleepTimer(0,0,30);  //Wait 30 hours 
+
+    startMotor(inB1, inB2, rotB);
+    sleepTimer(0,10,0); //Drain all
+    stopMotor(inB1, inB2); //Stop Drain 
+
+    startMotor(inC1, inC2, rotC); 
+    sleepTimer(0,1,0); //Fill
+
+    startMotor(inB1,inB2, rotB); 
+    sleepTimer(0,10,0); //Flush 
+
+    stopMotor(inC1, inC2); //Stop flush
+    stopMotor(inB1, inB2); 
+
+    startMotor(inA1, inA2, rotA); //Yield 
+    sleepTimer(0,3,0); //sleepTimer(0,1,0);
+    stopMotor(inA1, inA2);
 
     //Wait for manual reset 
     sleepTimer(0,0,999); 
+    
   }
 }
 
