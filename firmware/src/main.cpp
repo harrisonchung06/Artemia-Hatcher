@@ -75,6 +75,8 @@ int speedC = 255;
 bool rotA = false; 
 bool rotB = true; 
 bool rotC = false; 
+bool rotB = true; 
+bool rotC = false; 
 
 //Button Parameter 
 int buttonState;
