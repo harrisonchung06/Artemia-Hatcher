@@ -12,10 +12,7 @@
 <<<<<<< HEAD
                 "C:/Users/harrisonc/Downloads/Artemia-Hatcher/firmware/src",
                 "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/libraries/Wire/src",
-=======
-                "C:/Users/harrisonc/Downloads/Artemia-Hatcher/firmware/include",
-                "C:/Users/harrisonc/Downloads/Artemia-Hatcher/firmware/src",
->>>>>>> 8275f14 (Update)
+                "C:/Users/harrisonc/Downloads/Artemia-Hatcher/firmware/.pio/libdeps/ATmega328P/Low-Power",
                 "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/cores/MiniCore",
                 "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/variants/standard",
                 "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/libraries/AVR_examples/src",
@@ -52,10 +49,7 @@
 <<<<<<< HEAD
                     "C:/Users/harrisonc/Downloads/Artemia-Hatcher/firmware/src",
                     "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/libraries/Wire/src",
-=======
-                    "C:/Users/harrisonc/Downloads/Artemia-Hatcher/firmware/include",
-                    "C:/Users/harrisonc/Downloads/Artemia-Hatcher/firmware/src",
->>>>>>> 8275f14 (Update)
+                    "C:/Users/harrisonc/Downloads/Artemia-Hatcher/firmware/.pio/libdeps/ATmega328P/Low-Power",
                     "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/cores/MiniCore",
                     "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/variants/standard",
                     "C:/Users/harrisonc/.platformio/packages/framework-arduino-avr-minicore/libraries/AVR_examples/src",
