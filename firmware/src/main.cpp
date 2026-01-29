@@ -116,6 +116,10 @@ void loop() {
     digitalWrite(LED_BUILTIN, HIGH);
 
     startMotor(inB1, inB2, rotB);
+    sleepTimer(5,0,0);
+    stopMotor(inB1, inB2);
+    
+    startMotor(inB1, inB2, rotB);
     sleepTimer(0,10,0); //Setup initial conditions (all drained)
     stopMotor(inB1, inB2); 
 
